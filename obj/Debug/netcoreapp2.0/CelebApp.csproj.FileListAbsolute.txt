@@ -1,0 +1,10 @@
+c:\Users\Omerkaplan\CelebApp\bin\Debug\netcoreapp2.0\CelebApp.deps.json
+c:\Users\Omerkaplan\CelebApp\bin\Debug\netcoreapp2.0\CelebApp.runtimeconfig.json
+c:\Users\Omerkaplan\CelebApp\bin\Debug\netcoreapp2.0\CelebApp.runtimeconfig.dev.json
+c:\Users\Omerkaplan\CelebApp\bin\Debug\netcoreapp2.0\CelebApp.dll
+c:\Users\Omerkaplan\CelebApp\bin\Debug\netcoreapp2.0\CelebApp.pdb
+c:\Users\Omerkaplan\CelebApp\obj\Debug\netcoreapp2.0\CelebApp.csproj.CoreCompileInputs.cache
+c:\Users\Omerkaplan\CelebApp\obj\Debug\netcoreapp2.0\CelebApp.AssemblyInfoInputs.cache
+c:\Users\Omerkaplan\CelebApp\obj\Debug\netcoreapp2.0\CelebApp.AssemblyInfo.cs
+c:\Users\Omerkaplan\CelebApp\obj\Debug\netcoreapp2.0\CelebApp.dll
+c:\Users\Omerkaplan\CelebApp\obj\Debug\netcoreapp2.0\CelebApp.pdb

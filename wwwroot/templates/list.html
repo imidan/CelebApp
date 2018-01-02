@@ -1,0 +1,59 @@
+<h2 class="sub-header">Celeb list</h2>
+<form class="form-inline flex-row margin-bottom-15">
+    <div class="form-group flex-grow-1">
+        <input type="text" ng-model="search" class="form-control" placeholder="Search">
+    </div>
+    <div>
+        <button class="btn btn-primary" ng-click="open('sm')">Create new celeb</button>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr class="pointer">
+                    <th scope="col" ng-click="sort('name')">Name
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th scope="col" ng-click="sort('country')">Country
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='country'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th scope="col" ng-click="sort('age')">Age
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='age'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr dir-paginate="celeb in celebs|orderBy:sortKey:reverse|filter:search|itemsPerPage:15">
+                    <input type="hidden">{{celeb.id}}</th>
+                    <td>{{celeb.name}}</td>
+                    <td>{{celeb.country}}</td>
+                    <td>{{celeb.age}}</td>
+                    <td>
+                        <a href="#!/edit/{{celeb.id}}">Edit</a> |
+                        <a ng-click="delete(celeb.id,celeb.name)" class="pointer">Remove</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" > </dir-pagination-controls>
+    </div>
+</div>
+
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Create new celeb.</h3>
+    </div>
+    <div class="modal-body" id="modal-body">       
+            <p><input type="text" class="form-control" placeholder="Name" ng-model="name"></p>
+            <p><input type="text" class="form-control" placeholder="Country" ng-model="country"></p>
+            <p><input type="number" min="0" class="form-control" placeholder="Age" ng-model="age"></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="cancel(this)">Cancel</button>
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    </div>
+</script>

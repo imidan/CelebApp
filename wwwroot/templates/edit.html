@@ -1,0 +1,17 @@
+<h2 class="sub-header">Celeb edit</h2>
+<form>
+    <div class="form-group">
+      <label for="name">Full name:</label>
+      <input type="text" class="form-control" id="name" value="{{celeb.name}}" ng-model="name">
+    </div>
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <input type="text" class="form-control" id="country" value="{{celeb.country}}" ng-model="country">
+    </div>
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" value="{{celeb.age}}" ng-model="age">
+      </div>
+    <input type="hidden" value="{{celebID}}">
+    <button type="submit" class="btn btn-default" ng-click="update(id)">Submit</button>
+  </form>
